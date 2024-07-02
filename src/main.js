@@ -1,4 +1,5 @@
 import error from "./routes/error.js";
+import intro from "./routes/intro.js";
 import home from "./routes/home.js";
 
 function main() {
@@ -6,6 +7,7 @@ function main() {
     _init_router(
         {
             "/": home,
+            "/intro": intro,
             "/error": error,
         },
         app
@@ -13,12 +15,10 @@ function main() {
 }
 
 function _init_router(routes, container) {
-    const path = document.location.pathname ?? "/";
+    const path = location.pathname ?? "/";
 
     if (!routes[path]) {
-        history.replaceState("", "", "/error");
-        container.appendChild(routes["/error"]);
-        return;
+        location.replace("/error");
     }
 
     container.appendChild(routes[path]);
