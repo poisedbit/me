@@ -8,7 +8,6 @@ function main() {
         {
             "/": home,
             "/intro": intro,
-            "/error": error,
         },
         app
     );
@@ -16,12 +15,7 @@ function main() {
 
 function _init_router(routes, container) {
     const path = location.pathname ?? "/";
-
-    if (!routes[path]) {
-        location.replace("/error");
-    }
-
-    container.appendChild(routes[path]);
+    container.appendChild(routes[path] ?? error);
 }
 
 main();

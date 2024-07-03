@@ -1,6 +1,6 @@
 const error = Object.assign(document.createElement("article"), {
     innerHTML: `
-        <h1>error</h1>
+        <h1>Not found</h1>
 `,
 });
 
