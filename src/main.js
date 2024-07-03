@@ -1,6 +1,7 @@
 import error from "./routes/error.js";
 import intro from "./routes/intro.js";
 import home from "./routes/home.js";
+import portfolio from "./routes/portfolio.js";
 import nav from "./view/nav.js";
 
 function main() {
@@ -9,6 +10,7 @@ function main() {
         {
             "/": home,
             "/intro": intro,
+            "/portfolio": portfolio,
         },
         app
     );

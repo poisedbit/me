@@ -1,8 +1,12 @@
 export async function read(path) {
     // const ext = path.match(/[^.]+$/)[0];
     const res = await fetch(path);
-    const payload = await res.text();
-    return payload;
+
+    if (res.headers.get("content-type") === "application/json") {
+        return res.json();
+    }
+
+    return res.text();
 }
 
 export function parse(payload, ext) {
