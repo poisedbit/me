@@ -10,7 +10,7 @@ const home = Object.assign(document.createElement("article"), {
             <h2><a href="/portfolio">portfolio/</a></h2>
         </section>
         <section>
-            <h2><a href="/contact">contact/</a></h2>
+            <h2><a href="/about">about/</a></h2>
         </section>
 `,
 });
