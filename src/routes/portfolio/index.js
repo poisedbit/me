@@ -24,7 +24,7 @@ if (!repos || links.length !== repos.length || new Date().getDate() === 30) {
 
 const portfolio = Object.assign(document.createElement("article"), {
     innerHTML: `
-        <table>
+        <table border="5">
             <thead>
                 <tr>
                     <th>name</th>

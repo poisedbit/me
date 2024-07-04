@@ -4,7 +4,7 @@ const nav = Object.assign(document.createElement("nav"), {
             <a href="/intro">intro</a>
             <a href="/blog">blog</a>
             <a href="/portfolio">portfolio</a>
-            <a href="/contact">contact</a>
+            <a href="/about">about</a>
 `,
 });
 

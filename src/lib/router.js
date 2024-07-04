@@ -1,5 +1,6 @@
 import err from "/routes/err.js";
 import home from "/routes/index.js";
+import about from "/routes/about/index.js";
 import intro from "/routes/intro/index.js";
 import portfolio from "/routes/portfolio/index.js";
 import nav from "/view/nav.js";
@@ -9,6 +10,7 @@ export default function init_router(container) {
         "/": home,
         "/intro": intro,
         "/portfolio": portfolio,
+        "/about": about,
     };
     const path = location.pathname ?? "/";
 
