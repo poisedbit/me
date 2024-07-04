@@ -1,8 +1,3 @@
-import err from "./err.js";
-import intro from "./intro/index.js";
-import portfolio from "./portfolio/index.js";
-import nav from "/view/nav.js";
-
 const home = Object.assign(document.createElement("article"), {
     innerHTML: `
         <section>
@@ -20,15 +15,4 @@ const home = Object.assign(document.createElement("article"), {
 `,
 });
 
-export default function init_router(container) {
-    const routes = {
-        "/": home,
-        "/intro": intro,
-        "/portfolio": portfolio,
-    };
-    const path = location.pathname ?? "/";
-    container.append(
-        path !== "/" && routes[path] ? nav : "",
-        routes[path] ?? err
-    );
-}
+export default home;
