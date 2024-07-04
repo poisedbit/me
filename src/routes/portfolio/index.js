@@ -1,4 +1,4 @@
-import { read, parse } from "/lib/utils.js";
+import { read } from "/lib/utils.js";
 
 const key = "portfolio";
 const links = (await read("/assets/repos.txt"))
