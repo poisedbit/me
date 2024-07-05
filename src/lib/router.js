@@ -1,21 +1,21 @@
-import err from "/routes/err.js";
-import home from "/routes/index.js";
-import about from "/routes/about/index.js";
-import intro from "/routes/intro/index.js";
-import portfolio from "/routes/portfolio/index.js";
-import nav from "/view/nav.js";
+import Err from "/routes/err.js";
+import Root from "/routes/index.js";
+import About from "/routes/about/index.js";
+import Intro from "/routes/intro/index.js";
+import Portfolio from "/routes/portfolio/index.js";
+import Nav from "/view/nav.js";
 
-export default function init_router(container) {
+export default async function init_router(container) {
     const routes = {
-        "/": home,
-        "/intro": intro,
-        "/portfolio": portfolio,
-        "/about": about,
+        "/": Root,
+        "/intro": Intro,
+        "/portfolio": Portfolio,
+        "/about": About,
     };
     const path = location.pathname ?? "/";
 
     container.append(
-        path !== "/" && routes[path] ? nav : "",
-        routes[path] ?? err
+        path !== "/" && routes[path] ? Nav() : "",
+        routes[path] ? await routes[path]() : Err()
     );
 }

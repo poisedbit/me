@@ -1,7 +1,5 @@
-const error = Object.assign(document.createElement("article"), {
-    innerHTML: `
-        <h1>Not found</h1>
-`,
-});
-
-export default error;
+export default function Err() {
+    return Object.assign(document.createElement("h1"), {
+        textContent: "Not found",
+    });
+}

@@ -1,18 +1,10 @@
-const home = Object.assign(document.createElement("article"), {
-    innerHTML: `
-        <section>
+export default function Root() {
+    return Object.assign(document.createElement("article"), {
+        innerHTML: `
             <h2><a href="/intro">intro/</a></h2>
-        </section>
-        <section>
-            <a href="/blog"><h2>blog/</a></h2>
-        </section>
-        <section>
+            <h2><a href="/blog">blog/</a></h2>
             <h2><a href="/portfolio">portfolio/</a></h2>
-        </section>
-        <section>
             <h2><a href="/about">about/</a></h2>
-        </section>
-`,
-});
-
-export default home;
+        `,
+    });
+}
